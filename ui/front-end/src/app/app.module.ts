@@ -8,10 +8,14 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreRouterConnectingModule } from '@ngrx/router-store';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { HomeComponent } from './containers/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavigationComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
