@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-angular
+spec:
+  selector:
+    matchLabels:
+      app: demo-angular
+  template:
+    metadata:
+      labels:
+        app: demo-angular
+    spec:
+      containers:
+      - name: demo-angular
+        image: jeffrygonzalez/demo:v1
+
+        ports:
+        - containerPort: 80

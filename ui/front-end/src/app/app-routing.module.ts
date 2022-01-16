@@ -4,8 +4,18 @@ import { HomeComponent } from './containers/home/home.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent,
+  },
+
+  {
+    path: 'topics',
+    loadChildren: () =>
+      import('./features/topics/topics.module').then((m) => m.TopicsModule),
+  },
+  {
+    path: '**',
+    redirectTo: 'home',
   },
 ];
 
